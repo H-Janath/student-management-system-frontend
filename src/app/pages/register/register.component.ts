@@ -20,6 +20,11 @@ export class RegisterComponent {
     this.http.post("http://localhost:8080/student",this.Student)
     .subscribe(data=>{
       console.log(data);
+      this.Student={
+        firstName:null,
+        lastName:null,
+        contactNumber:null
+      }
     })
 
   }
