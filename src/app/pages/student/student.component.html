@@ -17,8 +17,8 @@
       <td>
         <button
           (click)="removeStudent(Student)"
-          data-toggle="modal" data-target="exampleModal"
-          class="btn btn-danger"
+          data-toggle="modal" data-target="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          class="btn btn-danger" 
         >
           Remove
         </button>
@@ -27,3 +27,22 @@
   </tbody>
 </table>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <h2 class="fw-bold mb-0">Student Registration Successfull</h2>
+        <ul class="d-grid gap-4 my-5 list-unstyled small">
+          <li class="d-flex gap-4">
+            <svg class="bi text-body-secondary flex-shrink-0" width="48" height="48"><use xlink:href="#grid-fill"/></svg>
+            <div>
+              Student delete Successfull
+            </div>
+          </li>
+        </ul>
+        <button type="button"   routerLink="/list"  class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Go to student View</button>
+      </div>
+    </div>
+  </div>
+</div>

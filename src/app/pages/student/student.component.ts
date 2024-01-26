@@ -26,11 +26,14 @@ export class StudentComponent implements OnInit{
   }
 
   public removeStudent(student:any){
+    
     console.log(student);
     let apiUrl = "http://localhost:8080/student/"+student.id;
     this.http.delete(apiUrl)
+    
     .subscribe(data=>{
       console.log(data)
+      this.loadStudent();
     })
   }
 }
