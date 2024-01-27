@@ -15,12 +15,8 @@
       <td>{{ Student.lastName }}</td>
       <td>{{ Student.contactNumber }}</td>
       <td>
-        <button
-          data-toggle="modal" data-target="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          class="btn btn-danger" 
-        >
-        <i class="bi bi-trash3"></i>
-        </button>
+        <button data-toggle="modal" data-target="exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+        <button data-target="exampleModal"  class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#updateModal"><i class="bi bi-pencil-square"></i></button>
       </td>
     </tr>
   </tbody>
@@ -37,6 +33,32 @@
       <div class="modal-footer flex-nowrap p-0">
         <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" ><strong>Yes, procced</strong></button>
         <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" data-bs-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-5 pt-0">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">First Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Last Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Contact Number</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">update</button>
+        </form>
       </div>
     </div>
   </div>
