@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './student.component.css'
 })
 export class StudentComponent implements OnInit{
-
+  public selectedStudent:any;
   public studentList : any;
   public http;
   constructor(private httpClient:HttpClient){
@@ -24,11 +24,15 @@ export class StudentComponent implements OnInit{
       this.studentList = data;
     })
   }
+ 
+  public setSelectedStudent(Student:any){
+    this.selectedStudent=Student;
+  }
 
-  public removeStudent(student:any){
+  public removeStudent(){
     
-    console.log(student);
-    let apiUrl = "http://localhost:8080/student/"+student.id;
+    console.log(this.selectedStudent);
+    let apiUrl = "http://localhost:8080/student/"+this.selectedStudent.id;
     this.http.delete(apiUrl)
     
     .subscribe(data=>{
