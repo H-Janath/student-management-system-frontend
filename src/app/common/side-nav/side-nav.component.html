@@ -5,32 +5,32 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a routerLink="" class="nav-link active" aria-current="page">
+      <li class="nav-item"  (click)="changeActive('home')">
+        <a [ngClass]="{'active':selectedMenu=='home'}" routerLink=""  class="nav-link active" aria-current="page">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
       </li>
-      <li>
-        <a  class="nav-link link-body-emphasis">
+      <li (click)="changeActive('registraion')">
+        <a href="#" class="nav-link link-body-emphasis" [ngClass]="{'active':selectedMenu=='registraion'}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
           Registration
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
+      <li (click)="changeActive('orders')">
+        <a href="#" class="nav-link link-body-emphasis"  [ngClass]="{'active':selectedMenu=='orders'}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Orders
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
+      <li (click)="changeActive('Products')">
+        <a href="#" class="nav-link link-body-emphasis" [ngClass]="{'active':selectedMenu=='Products'}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
           Products
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-body-emphasis">
+      <li  (click)="changeActive('customers')">
+        <a href="#" class="nav-link link-body-emphasis" [ngClass]="{'active':selectedMenu=='customers'}">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
           Customers
         </a>

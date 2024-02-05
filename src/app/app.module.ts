@@ -10,6 +10,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { SideNavComponent } from './common/side-nav/side-nav.component';
 import{HttpClientModule} from'@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     StudentComponent,
     RegisterComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

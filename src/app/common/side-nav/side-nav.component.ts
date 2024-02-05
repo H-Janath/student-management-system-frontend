@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './side-nav.component.css'
 })
 export class SideNavComponent {
+  public selectedMenu="home";
 
+
+  public changeActive(menu:string){
+    this.selectedMenu=menu;
+  }
 }

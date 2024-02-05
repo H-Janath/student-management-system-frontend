@@ -33,6 +33,5 @@ export class RegisterComponent {
         contactNumber:null
       }
     })
-
   }
 }

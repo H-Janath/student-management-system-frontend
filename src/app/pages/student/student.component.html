@@ -46,18 +46,18 @@
       <div class="modal-body p-5 pt-0">
         <form class="">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+            <input type="text" [(ngModel)]="selectedStudent.firstName" [ngModelOptions]="{standalone: true}" class="form-control rounded-3" id="floatingInput" [ngModelOptions]="{standalone: true}">
             <label for="floatingInput">First Name</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <input type="text"  [(ngModel)]="selectedStudent.lastName" [ngModelOptions]="{standalone: true}"  class="form-control rounded-3" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Last Name</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <input type="text"  [(ngModel)]="selectedStudent.contactNumber" [ngModelOptions]="{standalone: true}"  class="form-control rounded-3" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Contact Number</label>
           </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="submit" >update</button>
+          <button (click)="createStudent()" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="submit" >update</button>
         </form>
       </div>
     </div>
